@@ -120,6 +120,24 @@ namespace TestHoursWorkedCalculator
 			TransparentWindowActiveTitle.ForceClose();
 		}
 
+		private void labelAbout_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+		{
+			bool origTopmost = this.Topmost;
+			this.Topmost = false;
+			try
+			{
+				AboutWindow2.ShowAboutWindow(new System.Collections.ObjectModel.ObservableCollection<DisplayItem>()
+				{
+					new DisplayItem("Author", "Francois Hill"),
+					new DisplayItem("Icon(s) obtained from", null)
+				});
+			}
+			finally
+			{
+				this.Topmost = origTopmost;
+			}
+		}
+
 		/*private void StartPipeClient()
 		{
 			NamedPipesInterop.NamedPipeClient pipeclient = NamedPipesInterop.NamedPipeClient.StartNewPipeClient(

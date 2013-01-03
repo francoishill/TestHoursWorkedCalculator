@@ -51,7 +51,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Apps-clock.ico</ApplicationIcon>
+    <ApplicationIcon>app.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestCertificateThumbprint>6B4219E49A0289C95746DCA1F27DB5C078ACA591</ManifestCertificateThumbprint>
@@ -107,8 +107,21 @@
     <ApplicationDefinition Include="App.xaml">
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
+    <Compile Include="..\..\SharedClasses\AboutWindow2.xaml.cs">
+      <Link>AboutWindow2.xaml.cs</Link>
+      <DependentUpon>AboutWindow2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\SharedClasses\AppTypeIndependant.cs">
+      <Link>AppTypeIndependant.cs</Link>
+    </Compile>
+    <Compile Include="..\..\SharedClasses\AutoUpdating.cs">
+      <Link>AutoUpdating.cs</Link>
+    </Compile>
     <Compile Include="..\..\SharedClasses\CalledFromService.cs">
       <Link>CalledFromService.cs</Link>
+    </Compile>
+    <Compile Include="..\..\SharedClasses\DeveloperCommunication.cs">
+      <Link>DeveloperCommunication.cs</Link>
     </Compile>
     <Compile Include="..\..\SharedClasses\EncodeAndDecodeInterop.cs">
       <Link>EncodeAndDecodeInterop.cs</Link>
@@ -118,6 +131,9 @@
     </Compile>
     <Compile Include="..\..\SharedClasses\fastJSON.cs">
       <Link>fastJSON.cs</Link>
+    </Compile>
+    <Compile Include="..\..\SharedClasses\FeedbackMessageTypes.cs">
+      <Link>FeedbackMessageTypes.cs</Link>
     </Compile>
     <Compile Include="..\..\SharedClasses\FileSystemInterop.cs">
       <Link>FileSystemInterop.cs</Link>
@@ -142,11 +158,24 @@
       <Link>PickItemWPF.xaml.cs</Link>
       <DependentUpon>PickItemWPF.xaml</DependentUpon>
     </Compile>
+    <Compile Include="..\..\SharedClasses\ProcessesInterop.cs">
+      <Link>ProcessesInterop.cs</Link>
+    </Compile>
+    <Compile Include="..\..\SharedClasses\ReflectionInterop.cs">
+      <Link>ReflectionInterop.cs</Link>
+    </Compile>
+    <Compile Include="..\..\SharedClasses\RegistryInterop.cs">
+      <Link>RegistryInterop.cs</Link>
+    </Compile>
     <Compile Include="..\..\SharedClasses\SettingsInterop.cs">
       <Link>SettingsInterop.cs</Link>
     </Compile>
     <Compile Include="..\..\SharedClasses\ThreadingInterop.cs">
       <Link>ThreadingInterop.cs</Link>
+    </Compile>
+    <Compile Include="..\..\SharedClasses\UnhandledExceptionsWindow.xaml.cs">
+      <Link>UnhandledExceptionsWindow.xaml.cs</Link>
+      <DependentUpon>UnhandledExceptionsWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="..\..\SharedClasses\UserMessages.cs">
       <Link>UserMessages.cs</Link>
@@ -168,10 +197,18 @@
     <Compile Include="TransparentWindowActiveTitle.xaml.cs">
       <DependentUpon>TransparentWindowActiveTitle.xaml</DependentUpon>
     </Compile>
+    <Page Include="..\..\SharedClasses\AboutWindow2.xaml">
+      <Link>AboutWindow2.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="..\..\SharedClasses\PickItemWPF.xaml">
       <Link>PickItemWPF.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\SharedClasses\UnhandledExceptionsWindow.xaml">
+      <Link>UnhandledExceptionsWindow.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -238,9 +275,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Apps-clock.ico" />
-  </ItemGroup>
-  <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5,Profile=Client">
       <Visible>False</Visible>
       <ProductName>Microsoft .NET Framework 4.5 Client Profile %28x86 and x64%29</ProductName>
@@ -266,6 +300,7 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="app.ico" />
     <Content Include="Lame.exe">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

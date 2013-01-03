@@ -147,8 +147,16 @@
 		<Button Content='Show report'
 				VerticalAlignment='Bottom'
 				HorizontalAlignment='Right'
-				Margin='10'
+				Margin='10 15'
 				Padding='5'
 				Click='Button_Click' />
+		<Label Content='_About'
+			   FontSize='10'
+			   Foreground='Gray'
+			   Cursor='Hand'
+			   VerticalAlignment='Bottom'
+			   HorizontalAlignment='Right'
+			   Padding='0'
+			   MouseLeftButtonDown='labelAbout_MouseLeftButtonDown' />
 	</Grid>
 </Window>
