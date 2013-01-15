@@ -138,6 +138,9 @@
     <Compile Include="..\..\SharedClasses\FileSystemInterop.cs">
       <Link>FileSystemInterop.cs</Link>
     </Compile>
+    <Compile Include="..\..\SharedClasses\Logging.cs">
+      <Link>Logging.cs</Link>
+    </Compile>
     <Compile Include="..\..\SharedClasses\MiniDownloadBarForm.cs">
       <Link>MiniDownloadBarForm.cs</Link>
       <SubType>Form</SubType>
@@ -187,6 +190,9 @@
     </Compile>
     <Compile Include="..\..\SharedClasses\Win32Api.cs">
       <Link>Win32Api.cs</Link>
+    </Compile>
+    <Compile Include="..\..\SharedClasses\WindowsMonitor.cs">
+      <Link>WindowsMonitor.cs</Link>
     </Compile>
     <Compile Include="..\..\SharedClasses\WinMMinterop.cs">
       <Link>WinMMinterop.cs</Link>

@@ -81,6 +81,7 @@ namespace TestHoursWorkedCalculator
 		private void Window_Loaded(object sender, RoutedEventArgs e)
 		{
 			monitor = new WindowsMonitor(
+				TransparentWindowActiveTitle.UpdateText,
 				(startup, idleduration) =>
 				{
 					Dispatcher.Invoke((Action)delegate { labelIdleDuration.Content = "Idle seconds: " + idleduration.TotalSeconds; });
@@ -113,9 +114,14 @@ namespace TestHoursWorkedCalculator
 		{
 			//monitor.Stop();
 
+			string subfolder = "Reports\\" + DateTime.Now.ToString("yyyy_MM_dd HH_mm_ss");
 			Dictionary<string, WindowsMonitor.WindowTimes> windowsActivatedToday;
 			if (monitor.StopAndGetReport(out windowsActivatedToday))
-				ReportWindow.SaveReportsToJsonAndHtmlAndRecordedWave(new ObservableCollection<WindowsMonitor.WindowTimes>(windowsActivatedToday.Values));
+				WindowsMonitor.SaveReportsToJsonAndHtmlAndRecordedWave(
+					new ObservableCollection<WindowsMonitor.WindowTimes>(windowsActivatedToday.Values),
+					ReportWindow.GetReportsJsonFilePath(subfolder),
+					ReportWindow.GetHtmlFilePath(subfolder),
+					ReportWindow.GetRecordinsSaveToDirectory(subfolder));
 
 			TransparentWindowActiveTitle.ForceClose();
 		}
