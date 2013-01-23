@@ -21,10 +21,6 @@ using System.Text.RegularExpressions;
 //using VoiceRecorder.Audio;
 //using NAudio.Wave;
 
-//TODO: Two items still to build into this app:
-//1. Bandwidth calculator (network usage, download, total sent, etc)
-//2. Using amplitude to determine when to record (...\Handy downloads\Source code\C#\WPFsoundVisualization)
-
 namespace TestHoursWorkedCalculator
 {
 	/// <summary>
