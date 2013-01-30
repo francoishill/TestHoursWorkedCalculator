@@ -3,7 +3,8 @@
 		xmlns:local="clr-namespace:TestHoursWorkedCalculator"
 		xmlns:extToolkit="clr-namespace:Xceed.Wpf.Toolkit;assembly=WPFToolkit.Extended"
 		x:Class="TestHoursWorkedCalculator.MainWindow"
-		Title="MainWindow"
+		Title="Hours Worked Calculator"
+		Icon='app.ico'
 		Height='364'
 		Width="700"
 		WindowStartupLocation="CenterScreen"
