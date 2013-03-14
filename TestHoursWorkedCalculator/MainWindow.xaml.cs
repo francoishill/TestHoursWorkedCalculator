@@ -121,7 +121,7 @@ namespace TestHoursWorkedCalculator
 					new ObservableCollection<WindowsMonitor.WindowTimes>(windowsActivatedToday.Values),
 					ReportWindow.GetReportsJsonFilePath(subfolder),
 					ReportWindow.GetHtmlFilePath(subfolder),
-					ReportWindow.GetRecordinsSaveToDirectory(subfolder));
+					WindowsMonitor.MustRecord ? ReportWindow.GetRecordinsSaveToDirectory(subfolder) : "");
 
 			TransparentWindowActiveTitle.ForceClose();
 		}
