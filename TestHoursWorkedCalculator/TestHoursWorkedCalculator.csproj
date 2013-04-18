@@ -36,7 +36,8 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <BaseIntermediateOutputPath>..\..\..\..\Binaries\TestHoursWorkedCalculator\obj\Debug\AnyCPU</BaseIntermediateOutputPath>
+    <OutputPath>..\..\..\..\Binaries\TestHoursWorkedCalculator\bin\Debug\AnyCPU</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -45,7 +46,8 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+    <BaseIntermediateOutputPath>..\..\..\..\Binaries\TestHoursWorkedCalculator\obj\Release\AnyCPU</BaseIntermediateOutputPath>
+    <OutputPath>..\..\..\..\Binaries\TestHoursWorkedCalculator\bin\Release\AnyCPU</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -67,7 +69,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <DebugSymbols>true</DebugSymbols>
-    <OutputPath>bin\Debug\</OutputPath>
+    <BaseIntermediateOutputPath>..\..\..\..\Binaries\TestHoursWorkedCalculator\obj\Debug\x86</BaseIntermediateOutputPath>
+    <OutputPath>..\..\..\..\Binaries\TestHoursWorkedCalculator\bin\Debug\x86</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <DebugType>full</DebugType>
     <PlatformTarget>x86</PlatformTarget>
@@ -75,7 +78,8 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
-    <OutputPath>bin\Release\</OutputPath>
+    <BaseIntermediateOutputPath>..\..\..\..\Binaries\TestHoursWorkedCalculator\obj\Release\x86</BaseIntermediateOutputPath>
+    <OutputPath>..\..\..\..\Binaries\TestHoursWorkedCalculator\bin\Release\x86</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <Optimize>true</Optimize>
     <DebugType>pdbonly</DebugType>
@@ -102,8 +106,8 @@
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
-    <Reference Include="wpftoolkit.extended">
-      <HintPath>..\..\..\..\..\..\..\francois\other\dlls\wpf toolkit (extended)\wpftoolkit.extended.dll</HintPath>
+    <Reference Include="WPFToolkit.Extended">
+      <HintPath>..\..\..\..\..\Users\francois\Dropbox\Dev\DLLs\WPF Toolkit (Extended)\WPFToolkit.Extended.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
