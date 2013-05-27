@@ -49,13 +49,13 @@ namespace TestHoursWorkedCalculator
 		}
 		public static void UpdateText(string text)
 		{
-			if (instanceWindow == null)
+			/*if (instanceWindow == null)
 				ShowWindow();
 			while (instanceWindow == null) { }
 			instanceWindow.Dispatcher.Invoke((Action)delegate
 			{
 				instanceWindow.textblock1.Text = text;
-			});
+			});*/
 		}
 		public static void ForceClose()
 		{
