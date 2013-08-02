@@ -19,7 +19,7 @@ namespace TestHoursWorkedCalculator
 
 			base.OnStartup(e);
 
-			TestHoursWorkedCalculator.MainWindow mw = new MainWindow();
+			TestHoursWorkedCalculator.HoursWorkedCalculator mw = new HoursWorkedCalculator();
 			mw.ShowDialog();
 		}
 	}

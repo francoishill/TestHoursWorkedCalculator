@@ -132,7 +132,7 @@
     <Compile Include="TransparentWindowActiveTitle.xaml.cs">
       <DependentUpon>TransparentWindowActiveTitle.xaml</DependentUpon>
     </Compile>
-    <Page Include="MainWindow.xaml">
+    <Page Include="HoursWorkedCalculator.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -140,8 +140,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
+    <Compile Include="HoursWorkedCalculator.xaml.cs">
+      <DependentUpon>HoursWorkedCalculator.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Page Include="ReportWindow.xaml">

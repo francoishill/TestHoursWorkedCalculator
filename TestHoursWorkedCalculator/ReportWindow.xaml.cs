@@ -73,8 +73,8 @@ namespace TestHoursWorkedCalculator
 			listBox1.ItemsSource = tmplist;
 		}
 
-		private string WindowTitleGroupingFilePath { get { return SettingsInterop.GetFullFilePathInLocalAppdata("WindowTitleGroupings.fjset", MainWindow.ThisAppName); } }
-		public static string SelectedRecordingDeviceFilepath { get { return SettingsInterop.GetFullFilePathInLocalAppdata("SelectedRecordingDevice.fjset", MainWindow.ThisAppName); } }
+		private string WindowTitleGroupingFilePath { get { return SettingsInterop.GetFullFilePathInLocalAppdata("WindowTitleGroupings.fjset", HoursWorkedCalculator.ThisAppName); } }
+		public static string SelectedRecordingDeviceFilepath { get { return SettingsInterop.GetFullFilePathInLocalAppdata("SelectedRecordingDevice.fjset", HoursWorkedCalculator.ThisAppName); } }
 
 		private void GetGroupingOfWindowTitles()
 		{
@@ -134,7 +134,7 @@ namespace TestHoursWorkedCalculator
 
 		private void buttonLoad_Click(object sender, RoutedEventArgs e)
 		{
-			var reportsDir = System.IO.Path.GetDirectoryName(SettingsInterop.GetFullFilePathInLocalAppdata("", MainWindow.ThisAppName, "Reports"));
+			var reportsDir = System.IO.Path.GetDirectoryName(SettingsInterop.GetFullFilePathInLocalAppdata("", HoursWorkedCalculator.ThisAppName, "Reports"));
 			string filepath = FileSystemInterop.SelectFile("Please select a json file to import", reportsDir, "Json files (*.json)|*.json");
 			if (filepath != null)
 			{
@@ -149,23 +149,27 @@ namespace TestHoursWorkedCalculator
 
 		public static string GetReportsJsonFilePath(string subfolder)
 		{
-			return SettingsInterop.GetFullFilePathInLocalAppdata("reportList.json", MainWindow.ThisAppName, subfolder);
+			return SettingsInterop.GetFullFilePathInLocalAppdata("reportList.json", HoursWorkedCalculator.ThisAppName, subfolder);
 		}
 
 		public static string GetHtmlFilePath(string subfolder)
 		{
-			return SettingsInterop.GetFullFilePathInLocalAppdata("reports.html", MainWindow.ThisAppName, subfolder);
+			return SettingsInterop.GetFullFilePathInLocalAppdata("reports.html", HoursWorkedCalculator.ThisAppName, subfolder);
 		}
 
-		public static string GetRecordinsSaveToDirectory(string subfolder)
+		/*public static string GetRecordinsSaveToDirectory(string subfolder)
 		{
 			return SettingsInterop.LocalAppdataPath(MainWindow.ThisAppName + "\\" + subfolder + "\\recordings");
-		}
+		}*/
 
 		private void buttonSave_Click(object sender, RoutedEventArgs e)
 		{
 			string subfolder = "Reports\\" + DateTime.Now.ToString("yyyy_MM_dd HH_mm_ss");
-			WindowsMonitor.SaveReportsToJsonAndHtmlAndRecordedWave(listBox1.ItemsSource as ObservableCollection<WindowsMonitor.WindowTimes>, GetReportsJsonFilePath(subfolder), GetHtmlFilePath(subfolder), GetRecordinsSaveToDirectory(subfolder));
+			WindowsMonitor.SaveReportsToJsonAndHtmlAndRecordedWave(
+				listBox1.ItemsSource as ObservableCollection<WindowsMonitor.WindowTimes>,
+				GetReportsJsonFilePath(subfolder),
+				GetHtmlFilePath(subfolder)/*
+				GetRecordinsSaveToDirectory(subfolder)*/);
 		}
 
 		private string mPrevText = "";
